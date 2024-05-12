@@ -6,5 +6,3 @@ def main(request):
 
 def about(request):
     return render(request, 'about-modern.html')
-
-
