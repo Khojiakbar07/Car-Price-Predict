@@ -18,3 +18,6 @@ def carlisting(request):
 
 def contact(request):
     return render(request, 'contact-modern.html')
+
+def login(request):
+    return render(request, 'Login.html')
