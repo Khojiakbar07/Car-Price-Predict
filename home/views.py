@@ -15,3 +15,6 @@ def carlisting(request):
 
 def contact(request):
     return render(request, 'contact-modern.html')
+
+def test(request):
+    return render(request, 'electro-home.html')

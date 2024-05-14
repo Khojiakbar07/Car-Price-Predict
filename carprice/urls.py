@@ -25,4 +25,5 @@ urlpatterns = [
     path('carpredict/' , carpredict , name='Car Pricing Predict'),
     path('carlisting/' , carlisting , name='Car Listing Page'),
     path('contact/' , contact , name='Contact Page'),
+    path('test/' , test , name='Test Page'),
 ]
