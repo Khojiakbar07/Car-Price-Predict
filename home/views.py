@@ -7,6 +7,9 @@ def main(request):
 def about(request):
     return render(request, 'about-modern.html')
 
+def service(request):
+    return render(request, 'services-modern.html')
+
 def carpredict(request):
     return render(request, 'car-details.html')
 

@@ -84,18 +84,18 @@
                       <!-- menu logo -->
                       <ul class="menu-logo">
                         <li>
-                          <a href="index.html"><img id="logo_img" src={% static 'images/logo-onepage.png '%} alt="logo"> </a>
+                          <a href="{% url 'Interface' %}"><img id="logo_img" src={% static 'images/logo-onepage.png '%} alt="logo"> </a>
                         </li>
                       </ul>
                       <!-- menu links -->
                       <ul class="menu-links">
                         <!-- active class -->
-                        <li class="mega-menu-item"><a href="../electro-home.html">Home</a></li>
-                        <li class="mega-menu-item active"><a href="about-modern.html">About Us <span class="label-new">New</span></a></li>
-                        <li><a href="services-modern.html">Services <span class="label-new">New</span></a></li>
-                        <li><a href="car-details.html">Car Details</a></li>
-                        <li><a href="car-listing.html">Car Listing</a></li>
-                        <li class="mega-menu-item"><a href="contact-modern.html">Contact Us <span class="label-new">New</span></a></li>
+                        <li class="mega-menu-item"><a href="{% url 'Interface' %}">Home</a></li>
+                        <li class="mega-menu-item active"><a href="{% url 'About Page' %}">About Us <span class="label-new">New</span></a></li>
+                        <li class="mega-menu-item"><a href="{% url 'Service Page' %}">Services<span class="label-new">New</span></a></li>
+                        <li><a href="{% url 'Car Pricing Predict' %}">Car Details</a></li>
+                        <li><a href="{% url 'Car Listing Page' %}">Car Listing</a></li>
+                        <li class="mega-menu-item"><a href="{% url 'Contact Page' %}">Contact Us <span class="label-new">New</span></a></li>
                         <li class="mega-menu-item">
                           <div class="search-top"> <a class="search-btn not_click d-none d-lg-block"
                               href="javascript:void(0);">Search Button</a>

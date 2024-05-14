@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin123/', admin.site.urls),
     path('',main, name='Interface'),
     path('about/' , about , name='About Page'),
+    path('service/' , service , name='Service Page'),
     path('carpredict/' , carpredict , name='Car Pricing Predict'),
     path('carlisting/' , carlisting , name='Car Listing Page'),
     path('contact/' , contact , name='Contact Page'),
