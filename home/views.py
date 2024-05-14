@@ -6,3 +6,12 @@ def main(request):
 
 def about(request):
     return render(request, 'about-modern.html')
+
+def carpredict(request):
+    return render(request, 'car-details.html')
+
+def carlisting(request):
+    return render(request, 'car-listing.html')
+
+def contact(request):
+    return render(request, 'contact-modern.html')

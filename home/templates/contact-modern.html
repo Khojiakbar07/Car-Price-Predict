@@ -1,52 +1,53 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from themes.potenzaglobalsolutions.com/html/cardealer/demo-categories/contact-modern.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Mar 2024 14:58:59 GMT -->
+<!-- Mirrored from themes.potenzaglobalsolutions.com/html/cardealer/modern-home-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Mar 2024 14:56:51 GMT -->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="keywords" content="HTML5 Template" />
-  <meta name="description" content="Car Dealer - The Best Car Dealer Automotive Responsive HTML5 Template" />
-  <meta name="author" content="potenzaglobalsolutions.com" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Car Dealer - The Best Car Dealer Automotive Responsive HTML5 Template</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="HTML5 Template" />
+<meta name="description" content="" />
+<meta name="author" content="potenzaglobalsolutions.com" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Car Pricing Predict page</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"> 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"> 
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.ico" />
+<!-- Favicon -->
+<link rel="shortcut icon" href={% static 'images/favicon.ico'%} />
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<!-- bootstrap -->
+<link rel="stylesheet" type="text/css" href={% static 'css/bootstrap.min.css'%} />
 
-  <!-- flaticon -->
-  <link rel="stylesheet" type="text/css" href="../css/flaticon.css" />
+<!-- flaticon -->
+<link rel="stylesheet" type="text/css" href={% static 'css/flaticon.css'%} />
 
-  <!-- mega menu -->
-  <link rel="stylesheet" type="text/css" href="../css/mega-menu/mega_menu.css" />
+<!-- mega menu -->
+<link rel="stylesheet" type="text/css" href={% static 'css/mega-menu/mega_menu.css'%} />
 
-  <!-- font awesome -->
-  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="../css/all.min.css" />
+<!-- font awesome -->
+<link rel="stylesheet" type="text/css" href={% static 'css/font-awesome.min.css'%} />
+<link rel="stylesheet" type="text/css" href={% static 'css/all.min.css'%} />
 
-  <!-- owl-carousel -->
-  <link rel="stylesheet" type="text/css" href="../css/owl-carousel/owl.carousel.css" />
+<!-- owl-carousel -->
+<link rel="stylesheet" type="text/css" href={% static 'css/owl-carousel/owl.carousel.css'%} />
 
-  <!-- magnific-popup -->
-  <link rel="stylesheet" type="text/css" href="../css/magnific-popup/magnific-popup.css" />
+<!-- jquery-ui -->
+<link rel="stylesheet" type="text/css" href={% static 'css/jquery-ui.css'%} />
 
-  <!-- jquery-ui -->
-  <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css" />
+<!-- magnific-popup -->
+<link rel="stylesheet" type="text/css" href={% static 'css/magnific-popup/magnific-popup.css' />
 
-  <!-- main style -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css" />
-  <link rel="stylesheet" type="text/css" href="../css/style-new.css" />
-  <link rel="stylesheet" type="text/css" href="css/style-electro.css" />
+<!-- main style -->
+<link rel="stylesheet" type="text/css" href={% static 'css/style.css'%} />
+<link rel="stylesheet" type="text/css" href={% static 'css/style-new.css'%} />
+<link rel="stylesheet" type="text/css" href={% static 'css/style-electro.css'%} />
 
-  <!-- responsive -->
-  <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+<!-- responsive -->
+<link rel="stylesheet" type="text/css" href={% static 'css/responsive.css'%} />
 
 </head>
 
@@ -57,15 +58,14 @@
 
   <div id="loading">
     <div id="loading-center">
-      <img src="images/loader3.html" alt="">
-    </div>
+        <img src={% static 'images/loader3.gif'%} alt="">
+   </div>
   </div>
 
   <!--=================================
   loading -->
 
-
-  <!--=================================
+ <!--=================================
    header -->
    <header id="header" class="defualt header-fancy header-relative-dark">
     <!--=================================
@@ -83,7 +83,7 @@
                       <!-- menu logo -->
                       <ul class="menu-logo">
                         <li>
-                          <a href="../electro-home.html"><img id="logo_img" src="images/logo-light.png" alt="logo"> </a>
+                          <a href="index.html"><img id="logo_img" src={% static 'images/logo-light.png '%} alt="logo"> </a>
                         </li>
                       </ul>
                       <!-- menu links -->
@@ -340,7 +340,7 @@
   contact-map -->
 
 
-  <!--=================================
+<!--=================================
   footer -->
   <footer class="footer dark-bg">
     <div class="container">
@@ -348,7 +348,7 @@
         <div class="col-lg-4 col-md-4 col-sm-4 text-center text-md-start">
           <div class="footer-logo">
             <a href="../electro-home.html">
-              <img class="img-fluid site-logo" src="images/logo-light.png" alt="">
+              <img class="img-fluid site-logo" src={% static 'images/logo-light.png'%} alt="">
             </a>
           </div>
         </div>
@@ -396,7 +396,7 @@
             <h6 class="text-white widgettitle">recent posts </h6>
             <div class="recent-post">
               <div class="recent-post-image">
-                <img class="img-fluid" src="images/car/01.jpg" alt="">
+                <img class="img-fluid" src={% static 'images/car/01.jpg' %} alt="">
               </div>
               <div class="recent-post-info">
                 <a href="#">Time to change your </a>
@@ -405,7 +405,7 @@
             </div>
             <div class="recent-post">
               <div class="recent-post-image">
-                <img class="img-fluid" src="images/car/02.jpg" alt="">
+                <img class="img-fluid" src={% static 'images/car/02.jpg' %} alt="">
               </div>
               <div class="recent-post-info">
                 <a href="#">The best time to </a>
@@ -414,7 +414,7 @@
             </div>
             <div class="recent-post">
               <div class="recent-post-image">
-                <img class="img-fluid" src="images/car/03.jpg" alt="">
+                <img class="img-fluid" src={% static 'images/car/03.jpg' %} alt="">
               </div>
               <div class="recent-post-info">
                 <a href="#">Replacing a timing </a>
@@ -429,10 +429,10 @@
             <p>Download Our Car Dealer Mobile Application.</p>
             <div class="app-button-items">
                <div class="button-item">
-                  <a class="" href="#"><img class="img-fluid" src="../images/modern-home/appstore.png" alt=""></a>
+                  <a class="" href="#"><img class="img-fluid" src={% static 'images/modern-home/appstore.png' %} alt=""></a>
                </div>
                <div class="button-item">
-                  <a class="" href="#"><img class="img-fluid" src="../images/modern-home/google-play-store.png" alt=""></a>
+                  <a class="" href="#"><img class="img-fluid" src={% static 'images/modern-home/google-play-store.png' %} alt=""></a>
                </div>
             </div>
           </div>
@@ -466,52 +466,49 @@
   <!--=================================
  back to top -->
 
-  <div class="car-top">
-    <span><img src="images/car.html" alt=""></span>
-  </div>
+ <div class="car-top">
+  <span><img src={% static 'images/car-blue.png'%} alt=""></span>
+</div>
 
   <!--=================================
  back to top -->
 
-  <!--=================================
+<!--=================================
  jquery -->
 
-  <!-- jquery  -->
-  <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+<!-- jquery  -->
+<script type="text/javascript" src={% static 'js/jquery-3.6.0.min.js'%}></script>
 
-  <!-- bootstrap -->
-  <script type="text/javascript" src="../js/popper.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!-- bootstrap -->
+<script type="text/javascript" src={% static 'js/popper.js'%}></script>
+<script type="text/javascript" src={% static 'js/bootstrap.min.js'%}></script>
 
-  <!-- mega-menu -->
-  <script type="text/javascript" src="../js/mega-menu/mega_menu.js"></script>
+<!-- mega-menu -->
+<script type="text/javascript" src={% static 'js/mega-menu/mega_menu.js'%}></script>
 
-  <!-- appear -->
-  <script type="text/javascript" src="../js/jquery.appear.js"></script>
+<!-- appear -->
+<script type="text/javascript" src={% static 'js/jquery.appear.js'%}></script>
 
-  <!-- counter -->
-  <script type="text/javascript" src="../js/counter/jquery.countTo.js"></script>
+<!-- counter -->
+<script type="text/javascript" src={% static 'js/counter/jquery.countTo.js'%}></script>
 
-  <!-- isotope -->
-  <script type="text/javascript" src="../js/isotope/isotope.pkgd.min.js"></script>
+<!-- isotope -->
+<script type="text/javascript" src={% static 'js/isotope/isotope.pkgd.min.js'%}></script>
 
-  <!-- owl-carousel -->
-  <script type="text/javascript" src="../js/owl-carousel/owl.carousel.min.js"></script>
+<!-- owl-carousel -->
+<script type="text/javascript" src={% static 'js/owl-carousel/owl.carousel.min.js'%}></script>
 
-  <!-- jquery-ui -->
-  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+<!-- jquery-ui -->
+<script type="text/javascript" src={% static 'js/jquery-ui.js'%}></script>
 
-  <!-- select -->
-  <script type="text/javascript" src="../js/select/jquery-select.js"></script>
+<!-- select -->
+<script type="text/javascript" src={% static 'js/select/jquery-select.js'%}></script>
 
-  <!-- magnific popup -->
-  <script type="text/javascript" src="../js/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!-- magnific popup -->
+<script type="text/javascript" src={% static 'js/magnific-popup/jquery.magnific-popup.min.js'%}></script>
 
-  <script src="../js/swiper/swiper.min.js"></script>
-  <script src="../js/swiperanimation/SwiperAnimation.js"></script>
-
-  <!-- custom -->
-  <script type="text/javascript" src="../js/custom.js"></script>
+<!-- custom -->
+<script type="text/javascript" src={% static 'js/custom.js'%}></script>
 
 </body>
 
