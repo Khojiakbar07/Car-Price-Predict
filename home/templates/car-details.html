@@ -1285,13 +1285,15 @@ car-details  -->
     </div>
    </div>
    <div class="col-md-4">
-       <div class="car-details-sidebar">
+     <div class="car-details-sidebar">
+         <form method=post>
+          {% csrf_token %}
           <div class="details-block details-weight">
             <h5 class="sidebar-title">Description</h5>
             <ul>
-              <li class="d-flex justify-content-between"> <span>Make</span> <input class="border border-primary rounded-pill text-primary" type="text"></li>
+              <li class="d-flex justify-content-between"> <span>Car Name</span> <input class="border border-primary rounded-pill text-primary" type="text" name=Carname></li>
               <!-- <li> <span>Model</span> <strong class="text-end">7-series</strong></li> -->
-              <li class="d-flex justify-content-between"> <span>Model</span> <input class="border border-primary rounded-pill text-primary" type="text"></li>
+              <li class="d-flex justify-content-between"> <span>Model</span> <input class="border border-primary rounded-pill text-primary" type="text" name=model></li>
               <!-- <li> <span>Registration date </span> <strong class="text-end">2021</strong></li> -->
               <li class="d-flex justify-content-between"> <span>Registration date</span> <input class="border border-primary rounded-pill text-primary" type="text"></li>
               <!-- <li> <span>Mileage</span> <strong class="text-end">25,000 mi</strong></li> -->
@@ -1305,12 +1307,14 @@ car-details  -->
               <li> <span>Drivetrain</span> <strong class="text-end">FWD</strong></li>
             </ul>
           </div>
+          <input class="btn btn-primary col-md-6 mx-auto" type=submit value=Checking>
           <div class="col-md-6 d-flex flex-row-reverse">
             <div class="car-price text-lx-end">
                <strong>~ 69,995</strong>
             </div>
           </div>
-
+          {% comment %} <input class="btn btn-primary" type=submit value=OK> {% endcomment %}
+        </form>
           <br>
           <div class="details-social details-weight">
             <h5 class="sidebar-title">Share now</h5>

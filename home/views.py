@@ -11,6 +11,9 @@ def service(request):
     return render(request, 'services-modern.html')
 
 def carpredict(request):
+    if request.method=="POST":
+        print (request.POST.get('Carname'))
+        print (request.POST.get('model'))
     return render(request, 'car-details.html')
 
 def carlisting(request):
