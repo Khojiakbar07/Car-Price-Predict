@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avtomobil narxini bashorat qilish</title>
+</head>
+<body>
+    <h1>Avtomobil narxini bashorat qilish</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Prognoz</button>
+        <Select type="submit">CarCompanyName</Select>
+    </form>
+
+    {% if prediction is not None %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
