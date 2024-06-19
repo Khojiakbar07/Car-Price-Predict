@@ -91,12 +91,12 @@
                       <!-- menu links -->
                       <ul class="menu-links">
                         <!-- active class -->
-                        <li class="mega-menu-item active"><a href="javascript:void(0)">Home</a></li>
-                        <li class="mega-menu-item"><a href="{% url 'About Page' %}">About Us <span class="label-new">New</span></a></li>
-                        <li class="mega-menu-item"><a href="{% url 'Service Page' %}">Services<span class="label-new">New</span></a></li>
-                        <li><a href="{% url 'Car Pricing Predict' %}">Car Details</a></li>
-                        <li><a href="{% url 'Car Listing Page' %}">Car Listing</a></li>
-                        <li class="mega-menu-item"><a href="{% url 'Contact Page' %}">Contact Us <span class="label-new">New</span></a></li>
+                        <li class="mega-menu-item active"><a href={% static 'Interface' %}>Home</a></li>
+                        <li class="mega-menu-item"><a href={% static 'About Page' %}>About Us <span class="label-new">New</span></a></li>
+                        <li class="mega-menu-item"><a href={% static 'Service Page' %}>Services<span class="label-new">New</span></a></li>
+                        <li class="mega-menu-item "><a href={% static 'Car Pricing Predict' %}>Car Details</a></li>
+                        <li><a href={% static 'Car Listing Page' %}>Car Listing</a></li>
+                        <li class="mega-menu-item"><a href={% static 'Contact Page' %}>Contact Us <span class="label-new">New</span></a></li>
                         <li class="mega-menu-item">
                           <div class="search-top"> <a class="search-btn not_click d-none d-lg-block"
                               href="javascript:void(0);">Search Button</a>

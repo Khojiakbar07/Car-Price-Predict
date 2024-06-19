@@ -84,18 +84,18 @@
                       <!-- menu logo -->
                       <ul class="menu-logo">
                         <li>
-                          <a href="{% url 'Interface' %}"><img id="logo_img" src={% static 'images/logo-light.png '%} alt="logo"> </a>
+                          <a href="{% static 'Interface' %}"><img id="logo_img" src={% static 'images/logo-light.png '%} alt="logo"> </a>
                         </li>
                       </ul>
                       <!-- menu links -->
                       <ul class="menu-links">
                         <!-- active class -->
-                        <li class="mega-menu-item"><a href="{% url 'Interface' %}">Home</a></li>
-                        <li class="mega-menu-item"><a href="{% url 'About Page' %}">About Us <span class="label-new">New</span></a></li>
-                        <li class="mega-menu-item"><a href="{% url 'Service Page' %}">Services<span class="label-new">New</span></a></li>
-                        <li class="mega-menu-item active"><a href="{% url 'Car Pricing Predict' %}">Car Details</a></li>
-                        <li><a href="{% url 'Car Listing Page' %}">Car Listing</a></li>
-                        <li class="mega-menu-item"><a href="{% url 'Contact Page' %}">Contact Us <span class="label-new">New</span></a></li>
+                        {% comment %} <li class="mega-menu-item"><a href={% static 'Interface' %}>Home</a></li>
+                        <li class="mega-menu-item"><a href={% static 'About Page' %}>About Us <span class="label-new">New</span></a></li>
+                        <li class="mega-menu-item"><a href={% static 'Service Page' %}>Services<span class="label-new">New</span></a></li> {% endcomment %}
+                        <li class="mega-menu-item active"><a href={% static 'Car Pricing Predict' %}>Car Details</a></li>
+                        {% comment %} <li><a href={% static 'Car Listing Page' %}>Car Listing</a></li>
+                        <li class="mega-menu-item"><a href={% static 'Contact Page' %}>Contact Us <span class="label-new">New</span></a></li> {% endcomment %}
                         <li class="mega-menu-item">
                           <div class="search-top"> <a class="search-btn not_click d-none d-lg-block"
                               href="javascript:void(0);">Search Button</a>
@@ -1002,6 +1002,7 @@ car-details  -->
          </div>
       </div>
     </div>
+    
     <div class="row">
      <div class="col-md-8">
         <div class="slider-slick">
@@ -1286,35 +1287,150 @@ car-details  -->
    </div>
    <div class="col-md-4">
      <div class="car-details-sidebar">
-         <form method=post>
-          {% csrf_token %}
-          <div class="details-block details-weight">
-            <h5 class="sidebar-title">Description</h5>
-            <ul>
-              <li class="d-flex justify-content-between"> <span>Car Name</span> <input class="border border-primary rounded-pill text-primary" type="text" name=Carname></li>
-              <!-- <li> <span>Model</span> <strong class="text-end">7-series</strong></li> -->
-              <li class="d-flex justify-content-between"> <span>Model</span> <input class="border border-primary rounded-pill text-primary" type="text" name=model></li>
-              <!-- <li> <span>Registration date </span> <strong class="text-end">2021</strong></li> -->
-              <li class="d-flex justify-content-between"> <span>Registration date</span> <input class="border border-primary rounded-pill text-primary" type="text"></li>
-              <!-- <li> <span>Mileage</span> <strong class="text-end">25,000 mi</strong></li> -->
-              <li class="d-flex justify-content-between"> <span>Mileage</span> <input class="border border-primary rounded-pill text-primary" type="text"></li>
-              <!-- <li> <span>Condition</span> <strong class="text-end">New</strong></li> -->
-              <li class="d-flex justify-content-between"> <span>Condition</span> <input class="border border-primary rounded-pill text-primary" type="text"></li>
-              <li> <span>Exterior Color</span> <strong class="text-end">Silver</strong></li>
-              <li> <span>Interior Color</span> <strong class="text-end">Brown (Leather)</strong></li>
-              <li> <span>Transmission</span> <strong class="text-end">Automatic</strong></li>
-              <li> <span>Engine</span> <strong class="text-end">5.1 L</strong></li>
-              <li> <span>Drivetrain</span> <strong class="text-end">FWD</strong></li>
-            </ul>
-          </div>
-          <input class="btn btn-primary col-md-6 mx-auto" type=submit value=Checking>
+      {% comment %} {% csrf_token %} {% endcomment %}
+      <title>Avtomobil narxini bashorat qilish</title>
+        
+        <body>
+          <h3>Avtomobil narxini bashorat qilish</h3>
+          <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="csrfmiddlewaretoken" value="fMJEk2dFBQC3xwUlvYchJOtcpnX4mNp96qeRlQuRwgOmEolExUcveKDR0L0kiE8F">
+    
+            <p>
+                <label for="id_symboling">Symboling:</label>
+                <input type="number" name="symboling" required id="id_symboling">
+            </p>
+            <p>
+                <label for="id_wheelbase">Wheelbase:</label>
+                <input type="number" step="0.01" name="wheelbase" required id="id_wheelbase">
+            </p>
+            <p>
+                <label for="id_carlength">Car length:</label>
+                <input type="number" step="0.01" name="carlength" required id="id_carlength">
+            </p>
+            <p>
+                <label for="id_carwidth">Car width:</label>
+                <input type="number" step="0.01" name="carwidth" required id="id_carwidth">
+            </p>
+            <p>
+                <label for="id_carheight">Carheight:</label>
+                <input type="number" step="0.01" name="carheight" required id="id_carheight">
+            </p>
+            <p>
+                <label for="id_curbweight">Curbweight:</label>
+                <input type="number" step="0.01" name="curbweight" required id="id_curbweight">
+            </p>
+            <p>
+                <label for="id_horsepower">Horsepower:</label>
+                <input type="number" step="0.01" name="horsepower" required id="id_horsepower">
+            </p>
+            <p>
+                <label for="id_peakrpm"> Peak rpm: </label>
+                <input type="number" name="peakrpm" required id="id_peakrpm">
+            </p>
+            <p>
+                <label for="id_citympg">      City mpg: </label>
+                <input type="number" step="0.01" name="citympg" required id="id_citympg">
+            </p>
+            <p>
+                <label for="id_highwaympg">Highwaympg:</label>
+                <input type="number" step="0.01" name="highwaympg" required id="id_highwaympg">
+            </p>
+            <p>
+                <label for="id_fueltype">Fueltype:</label>
+                <select name="fueltype" id="id_fueltype" required>
+                    <option value="gas">Gas</option>
+                    <option value="diesel">Diesel</option>
+                </select>
+            </p>
+            <p>
+                <label for="id_carbody">Carbody:</label>
+                <select name="carbody" id="id_carbody" required>
+                    <option value="convertible">Convertible</option>
+                    <option value="hardtop">Hardtop</option>
+                    <option value="hatchback">Hatchback</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="wagon">Wagon</option>
+                </select>
+            </p>
+            <p>
+                <label for="id_enginetype">Enginetype:</label>
+                <select name="enginetype" id="id_enginetype" required>
+                    <option value="dohc">DOHC</option>
+                    <option value="dohcv">DOHCV</option>
+                    <option value="l">L</option>
+                    <option value="ohc">OHC</option>
+                    <option value="ohcf">OHCF</option>
+                    <option value="ohcv">OHCV</option>
+                    <option value="rotor">Rotor</option>
+                </select>
+            </p>
+            <p>
+                <label for="id_CarCompanyName">Car Company Name:</label>
+                <select name="CarCompanyName" id="id_CarCompanyName" required>
+                    <option value="alfa-romeo">Alfa Romeo</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="buick">Buick</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="dodge">Dodge</option>
+                    <option value="honda">Honda</option>
+                    <option value="isuzu">Isuzu</option>
+                    <option value="jaguar">Jaguar</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="mercury">Mercury</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="nissan">Nissan</option>
+                    <option value="peugeot">Peugeot</option>
+                    <option value="plymouth">Plymouth</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="renault">Renault</option>
+                    <option value="saab">Saab</option>
+                    <option value="subaru">Subaru</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="volvo">Volvo</option>
+                </select>
+            </p>
+            
+            <button type="submit">Prognoz</button>
+           </form>
+         </body>
+           <title>Prognoz natijasi</title>
+          
+           <body>
+            <!-- <h3>Prognoz natijasi {{CarPricePrediction.CarCompanyName}}</h3>
+            <p>Symboling: {{ CarPricePredictionForm.symboling }}</p>
+            <p>Wheelbase: {{ CarPricePredictionForm.wheelbase }}</p>
+            <p>Car length: {{ CarPricePredictionForm.carlength }}</p>
+            <p> Car width: {{ CarPricePredictionForm.carwidth }}</p>
+            <p>Carheight: {{ CarPricePredictionForm.carheight }}</p>
+            <p>Curbweight: {{ CarPricePredictionForm.curbweight }}</p>
+            <p>Horsepower: {{ CarPricePredictionForm.horsepower }}</p>
+            <p>Peak rpm: {{ CarPricePredictionForm.peakrpm }}</p>
+            <p>City mpg: {{ CarPricePredictionForm.citympg }}</p>
+            <p>Highwaympg: {{ CarPricePredictionForm.highwaympg }}</p>
+            <p>Fueltype: {{ CarPricePredictionForm.fueltype }}</p>
+            <p>Carbody: {{ CarPricePredictionForm.carbody }}</p>
+            <p>Enginetype: {{ CarPricePredictionForm.enginetype }}</p>
+            <p>CarCompanyName: {{ CarPricePredictionForm.CarCompanyName }}</p> -->
+            <a>Prognoz qilingan narx: {{ predicted_price }}</a>
+            <a href="{% static 'car_predict' %}"></a>
+         </body>
+     </div>
+         
+            
+
+
+
+          {% comment %} <input class="btn btn-primary col-md-6 mx-auto" type=submit value=Checking>
           <div class="col-md-6 d-flex flex-row-reverse">
             <div class="car-price text-lx-end">
                <strong>~ 69,995</strong>
             </div>
-          </div>
+          </div> {% endcomment %}
           {% comment %} <input class="btn btn-primary" type=submit value=OK> {% endcomment %}
-        </form>
+        
           <br>
           <div class="details-social details-weight">
             <h5 class="sidebar-title">Share now</h5>

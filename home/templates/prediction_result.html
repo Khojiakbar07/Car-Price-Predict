@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taxminiy narx</title>
+</head>
+<body>
+    <h1>Taxminiy narx {{ car.CarCompanyName }}</h1>
+    <p>Fuel Type: {{ car.fueltype }}</p>
+    <p>Highway MPG: {{ car.highwaympg }}</p>
+    <p>City MPG: {{ car.citympg }}</p>
+    <p>Horsepower: {{ car.horsepower }}</p>
+    <p>Curb Weight: {{ car.curbweight }}</p>
+    <h2>Taxminiy narx: {{ predicted_price }}</h2>
+    <a href="{% url 'car_predict' %}">Boshqa mashinani bashorat qilish</a>
+</body>
+</html>
